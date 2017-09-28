@@ -148,6 +148,56 @@ function fn(){
 ## 数值的扩展
 ## 函数的扩展
 ## 数组的扩展
+* 扩展运算符 ...
+扩展运算符用三个点表示，将一个数组或类数组对象转为用逗号分隔的参数序列
+```
+console.log(...[1,2,3])
+//1 2 3
+```
+1. 运算符主要用于函数调用
+```
+function add(x,y,z){
+  return x+y+z
+}
+var numbers=[2,3,4]
+add(...numbers)
+  //9
+```
+2. 用push函数将一个数组添加到另一个数组尾部
+```
+let arr1=[1,2,3]
+let arr2=[4,5,6]
+arr1.push(...arr2)
+```
+3. 用于合并数组
+```
+//ES5
+[1,2].concat(more)
+//es6
+[1,2,...more]
+```
+4. 与解构赋值结合可以生成数组,只能放在参数的最后一位
+```
+const [first,...rest]=[1,2,3,4,5]
+first//1
+rest//[2,3,4,5]
+```
+5. 帮助函数返回多个值
+```
+let dataFile=readDateFields(database)
+let d=new Date(...dataFile)
+```
+上面代码从数据库取出一行数据，通过扩展运算符，直接将其传入构造函数Date。
+6. 把字符串转换成数组
+```
+[...'hello']
+//["h", "e", "l", "l", "o"]
+```
+7. Map结构都可以用扩展运算符
+```
+let map=new Map([[1,'one'],[2,'two'],[3,'three']]);
+let arr=[...map.keys()]
+```
 ## 对象的扩展
 ## Set和Map数据结构
 ## Promise对象

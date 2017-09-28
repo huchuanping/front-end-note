@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>gird-layout</title>
+  <style type="text/css">
+    .blog {
+      display: grid;
+      grid-template-columns: 400px 20px 180px;
+      grid-template-rows: 100px 20px 210px 20px 100px 20px 100px;
+    }
+
+    .blog>div {
+      border: 1px solid #ddd;
+    }
+
+    .header {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+      background: #df7b78;
+    }
+
+    .content {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+      background: #78a7df;
+      /*   grid-row: 3 / 8; */
+      /*   z-index: 1; */
+    }
+
+    .sidebar {
+      grid-row: 3 / 4;
+      grid-column: 3 / 4;
+      background: #87c6b1;
+    }
+
+    .footer {
+      grid-row: 5 / 6;
+      grid-column: 1 / 4;
+      background: #f1df99;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="blog">
+    <div class="header"></div>
+    <div class="content"></div>
+    <div class="sidebar"></div>
+    <div class="footer"></div>
+  </div>
+</body>
+
+</html>
