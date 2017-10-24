@@ -199,6 +199,74 @@ let map=new Map([[1,'one'],[2,'two'],[3,'three']]);
 let arr=[...map.keys()]
 ```
 ## 对象的扩展
+1.属性简洁表示法
+es6允许直接写入变量和函数作为对象的属性和方法
+```
+const baz={foo:foo}
+//缩写
+const baz={foo}
+
+const obj={
+  method:function(){
+    //body
+  }
+}
+const obj={
+  method(){
+    //body
+  }
+}
+```
+2.属性名表达式
+访问对象属性有两种方法`.`和方括号[]
+```
+obj.foo=true;
+obj['a'+'bc']=123;
+```
+es6允许对象用表达式作为对象的属性名，表达式放在方括号内
+```
+let obj={
+  [proKey]:true,
+  ['a'+'bc']:123
+}
+```
+3. 对象方法的name属性
+name也可以用表达式表示
+```
+const key1
+let obj={
+  [key1](params){
+
+  }
+}
+```
+4.Object.assign(target,source1,source2)
+该方法用于对象的合并，将源对象所有可枚举属性，复制到目标对象
+```
+const target={a:1}
+const source1={b:2}
+const source2={c:3}
+Object.assign(target,source1,source2)
+target //{a:1,b:2,c:3}
+```
+常见用途
+* 为对象添加属性
+```
+class Point{
+  constructor(x,y){
+    Object.assign(this,{x,y})
+  }
+}
+```
+* 为对象添加方法
+```
+Object.assign(someObj,{
+  someMethod(arg1,arg2){
+    ...
+  }
+  })
+```
+
 ## Set和Map数据结构
 ## Promise对象
 ## Iterator和for...of循环
