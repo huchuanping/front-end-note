@@ -37,14 +37,14 @@
 
 ## 变量的解构赋值
 定义：es6允许按照一定模式，从数组和对象中提取值，对变量进行赋值
-其实就是模式匹配，等号左右两边模式相同，左边的变量就会被赋予对应的值
+其实就是模式匹配，等号左右两边模式相同，右边的变量就会被赋予对应的值
 ### 数组的解构赋值
 数组元素按此排列，变量的取值由元素位置决定
 ```
 let [a,b,c]=[1,2,3]
 a //1
 b //2
-c //
+c //3
 let [,,third]=['foo','bar','baz']
 third //'baz'
 let [x,,y]=[1,2,3]
@@ -59,7 +59,7 @@ y//undefined,解构不成功就是undefined
 z//[]
 ```
 ### 对象的解构赋值
-变量的取值由相同的属性名决定，与次序
+变量的取值由相同的属性名决定，与次序无关
 ```
 let {bar,foo}={foo:"aaa",bar:"bbb"}
 foo //"aaa"
@@ -274,6 +274,14 @@ Object.assign(someObj,{
 ## Generator的异步
 ## async函数
 ## Class的基本语法和继承
+```
+class Point{
+  constructor(){
+
+  }
+}
+Point===Point.prototype.constructor
+```
 ## Module的语法
 ## Module的加载实现
 ## 编程风格
