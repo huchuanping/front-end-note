@@ -268,7 +268,39 @@ Object.assign(someObj,{
 ```
 
 ## Set和Map数据结构
+es6实现数组去重方法
+```
+Array.from(new Set(arr))或者[...new Set(arr)]
+```
+Set是构造函数，用于创建set数据结构对象，它是有序列表结合不会包含重复项
+Set实例有三个方法。keys(),values(),forEach(),其中keys和values功能相同，都返回键值，键名和键值是相等的，因为set结构没有键名
+Map是有序的键值对集合，键值对的key和value都可以是任意类型的元素，通过`set(key,value)`方法可以为Map设置新的
+键值对，如果设置的key已经存在则用新的value覆盖
 ## Promise对象
+在没有promise前通常用回调函数层层嵌套的方式解决异步编程方式的
+
+所谓Promise,简单的说就是一个容器，里面保存着某个未来才会结束的事件(通常是一个异步操作)的结果。
+Promise是一个对象，从它可以获取异步操作的消息。
+只有异步操作的结果可以决定当前是哪一种状态（pending resolved rejected）
+状态一旦改变就不会再变
+### 用法
+Promise对象是一个构造函数,它接受一个函数作为参数，这个函数有两个参数resolve和reject，他们同样也是函数
+```
+const promise=function(param){
+    return new Promise(function(resolve,reject){
+        // ... 异步操作代码
+        if(/*异步操作成功*/){
+          resolve()
+        }else{
+          reject()
+        }
+    })
+  } 
+```
+Promise实例生成以后，可以用then方法分别指定resolved状态和rejected状态的回调函数。
+```
+promise().then(function(value){},function(erroe){})
+```
 ## Iterator和for...of循环
 ## Generator函数
 ## Generator的异步
