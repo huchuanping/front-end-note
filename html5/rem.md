@@ -59,8 +59,8 @@ retina屏幕dpr=2
     var fakeBody=document.createElement('body')
     var testElemet=document.createElement('div')
     testElemet.style.border='.5px solid transparent'
-    fakeBody.appenChild(testElemet)
-    docE1.appenChild(fakeBody)
+    fakeBody.appendChild(testElemet)
+    docE1.appendChild(fakeBody)
     if(testElemet.offsetHeight===1){
       docE1.classList.add('hairlines')
     }
@@ -90,8 +90,8 @@ metaE1.setAttribute('content','width='+dpr*docE1.clientWidth+',initial-scale='+s
 docE1.setAttribute('data-dpr',dpr);
 
 //动态写入样式
-docE1.firstElementChild.appenChild(fontE1);
-fontE1.innerHTML='html{font-size:}'+rem+'px!important';
+docE1.firstElementChild.appendChild(fontE1);
+fontE1.innerHTML='html{font-size:'+rem+'px!important}';
 
 //给js调用，某一dpr下rem和dpr之间的转换函数
 window.rem2px=function(v){
