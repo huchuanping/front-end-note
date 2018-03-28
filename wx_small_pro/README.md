@@ -78,3 +78,18 @@
 ## WXSS
 具有css大部分属性，也扩展了css的属性，特有属性有：
 尺寸单位rpx和格式导入@import
+## 组件
+### 视图容器组件
+`<view></view>`视图容器
+`<scroll-view></scroll-view>`可滚动视图容器
+`<swiper></swiper>`滑块视图容器
+`<movable-area></movable-area>` 可移动的视图容器 必须设置宽高
+`<cover-view></cover-view>>`内容覆盖容器
+### 基础内容组件
+内容组件 
+图标 `<icon type="" size="" color=""></icon>`
+文本 `<text selectable="是否可选" space=""></text>`
+富文本 `<rich-text></rich-text>`
+进度条 `<progress percent="" />`
+### 表单组件
+
