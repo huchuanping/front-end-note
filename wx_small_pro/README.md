@@ -92,4 +92,33 @@
 富文本 `<rich-text></rich-text>`
 进度条 `<progress percent="" />`
 ### 表单组件
+### 导航组件
+### 媒体组件
+### 地图组件
+### 画布组件
+## API
+### 网络API
+1. 发起请求 wx.request(object),类似ajax()
+2. 上传、下载 wx.uploadFile(object) wx.downloadFile(object)
+3.  Websocket wx.connectSocket(object)
+### 媒体API
+1. 图片 
+* wx.chooseImage(object) 从本地相册选择图片或使用相机拍照
+* wx.previewImage(object) 预览图片
+* wx.getImageInfo(object)获取图片信息
+* wx.saveImageToPhotosAlbum(object)保存图片到系统相册，需要用户授权
+2. 录音
+* wx.startRecord(object)
+* wx.stopRecord(object)
+3. 音频播放控制
+4. 音乐播放控制
+### 文件API
+* wx.saveFile(object)
+### 数据API
+wx.setStorage()
+wx.getStorage()
+wx.clearStorage()
+### 位置API
+wx.getLocation()返回当前的地理位置、速度
+
 
